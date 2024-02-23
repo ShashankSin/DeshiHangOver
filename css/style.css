@@ -26,6 +26,70 @@ header {
   width: 100%;
   background-color: #fff;
 } */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.productRight {
+  /* height: 80%; */
+  height: 100%;
+  width: 100%;
+}
+.image--slider--main--slide {
+  height: 1200px;
+  overflow: hidden;
+}
+.productLeft {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.productLeft .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.productLeft .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .advertising__banner {
   background-image: var(--gradient-background);
   cursor: grab;
@@ -265,12 +329,12 @@ nav i {
   justify-content: space-between;
 }
 .thumb--image--slider__image {
-  width: 300px !important;
+  width: 100% !important;
   height: 200px !important;
   margin-bottom: 2rem;
 }
 .thumb--image--slider__image img {
-  width: 200px !important;
+  width: 100% !important;
   height: 200px !important;
   object-fit: contain;
 }
@@ -284,8 +348,7 @@ nav i {
   opacity: 1;
 }
 .main--image--slider__image {
-  height: 660px !important;
-  width: 660px !important;
+  height: 100% !important;
 }
 .main--image--slider__image img {
   height: 100%;
@@ -305,12 +368,23 @@ nav i {
   margin: 0;
   padding: 0;
 }
+.image--slider--content > div ul li span {
+  font-size: 14px;
+}
+.image--slider--content > div ul li span:hover {
+  border: 1px solid #000 !important;
+}
+.image--slider--main--slide .swiper-slide {
+  transition-duration: 500ms !important;
+}
 .image--slider--content > div span,
 .image--slider--content > div b,
 .image--slider--content > div p,
 .image--slider--content > div ul li,
 .image--slider--content > div a,
-.image--slider--content > div h5 {
+.image--slider--content > div h5,
+.accordion-header,
+.accordion-body {
   font-family: "nunito sans";
 }
 .decrement,
@@ -324,13 +398,33 @@ nav i {
   padding: 0.5rem;
 }
 .image--slider--content > div button {
-  border: 1px solid #000;
   background-color: #000;
   color: #fff;
   padding: 10px 30px;
   letter-spacing: 1.5px;
   font-family: "nunito sans";
   width: 100%;
+  position: relative;
+  z-index: 1;
+  outline: none;
+  border: none;
+}
+.image--slider--content > div button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #644639;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+.image--slider--content > div button:hover::before,
+.image--slider--content > div button:focus::before {
+  transform: scaleX(1);
 }
 /* section end */
 
