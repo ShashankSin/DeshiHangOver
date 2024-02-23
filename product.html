@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap link-css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- swiper link-css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- google-icons link-css-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- google-font link-css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- box-icons-link-css -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- fontawsome link-css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- header starts -->
+    <header class="mb-1">
+      <!-- nav-banner starts -->
+      <nav class="py-2">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col">
+              <button
+                class="nav__banner--button justify-content-center d-flex"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              >
+                <span class="material-symbols-outlined fs-3 opacity-75">
+                  format_align_left
+                </span>
+              </button>
+
+              <div
+                class="offcanvas offcanvas-start"
+                data-bs-scroll="true"
+                tabindex="-1"
+                id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel"
+              >
+                <div class="offcanvas-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul>
+                    <li>New Arrivals</li>
+                    <li>Desis For Men</li>
+                    <li>Desis For Women</li>
+                    <li>Kolhapuris</li>
+                    <li>Style Guides</li>
+                    <li>Design & Making</li>
+                    <li>Our Impact</li>
+                    <li>Collaborations</li>
+                    <li>Exchange & Returns</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col justify-content-center d-flex nav__banner__logo">
+              <a href="#" target="_self"
+                ><img src="images/logo/DH-300x108.png" alt="logo"
+              /></a>
+            </div>
+            <div class="col justify-content-end d-flex align-items-center">
+              <button
+                class="nav__banner--button"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop"
+              >
+                <i class="fa-solid fa-magnifying-glass fs-5 me-4"></i>
+              </button>
+              <div
+                class="offcanvas offcanvas-top"
+                tabindex="-1"
+                id="offcanvasTop"
+                aria-labelledby="offcanvasTopLabel"
+              >
+                <form action="#" class="container">
+                  <span><i class="fa-solid fa-magnifying-glass"></i></span
+                  ><input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search"
+                  />
+                </form>
+              </div>
+              <i class="fa-regular fa-user fs-5 me-4"></i>
+              <button
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                class="nav__banner--button justify-content-center d-flex"
+              >
+                <i class="fa-solid fa-cart-shopping fs-5"></i>
+              </button>
+
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <h3>Your cart is currently empty</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- nav-banner ends -->
+    </header>
+    <!-- header ends -->
+
+    <section>
+      <div class="image--slider container mt-5">
+        <div class="row">
+          <div
+            style="
+              --swiper-navigation-color: #fff;
+              --swiper-pagination-color: #fff;
+            "
+            class="swiper productRight col-8 d-flex flex-row justify-content-between"
+          >
+            <div thumbsSlider="" class="swiper productLeft m-0 flex-fill">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide thumb--image--slider__image">
+                  <img src="images/slider-images/aotherside-bag-view.jpg" />
+                </div>
+                <div class="swiper-slide thumb--image--slider__image">
+                  <img src="images/slider-images/back-bag-view.jpg" />
+                </div>
+                <div class="swiper-slide thumb--image--slider__image">
+                  <img src="images/slider-images/bag-view.jpg" />
+                </div>
+                <div class="swiper-slide thumb--image--slider__image">
+                  <img src="images/slider-images/front-bag-view.jpg" />
+                </div>
+                <div class="swiper-slide thumb--image--slider__image">
+                  <img src="images/slider-images/inside-bag-view.jpg" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/aotherside-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/back-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/bag-view.jpg" />
+              </div>
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/front-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/inside-bag-view.jpg" />
+              </div>
+            </div>
+          </div>
+          <div class="image--slider--content col-4 p-0">
+            <div class="mb-3">
+              <h5>Content</h5>
+              <span class="my-3 d-block fs-4">RS. 12,789.98</span>
+              <samp>MRP inclusive of all taxes.</samp>
+            </div>
+            <div class="mb-3">
+              <span class="mb-1">Size</span>
+              <ul class="d-flex justify-content-between my-1 text-center">
+                <li class="border">
+                  <span class="d-block py-2 px-3">36</span>
+                </li>
+                <li class="border">
+                  <span class="d-block py-2 px-3">37</span>
+                </li>
+                <li class="border">
+                  <span class="d-block py-2 px-3">38</span>
+                </li>
+                <li class="border">
+                  <span class="d-block py-2 px-3">39</span>
+                </li>
+                <li class="border">
+                  <span class="d-block py-2 px-3">40</span>
+                </li>
+                <li class="border">
+                  <span class="d-block py-2 px-3">41</span>
+                </li>
+                <li class="border">
+                  <span class="d-block py-2 px-3">Size cart</span>
+                </li>
+              </ul>
+            </div>
+            <div class="mb-3">
+              <span class="d-block mb-1">Quantity</span>
+              <div class="d-inline-flex align-items-center border">
+                <span class="py-2 px-3 decrement">-</span>
+                <span class="py-2 px-3 number">1</span>
+                <span class="py-2 px-3 increment">+</span>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+              <button>Add to cart . Rs12,789.98</button>
+            </div>
+            <div>
+              <p>
+                A signature Abinav Mishra style combined with NEEDEDUST's unique
+                craftsmanship, creating the ivory jutti of your dreams! An all
+                over mirror floral jaal with elegant pearl work highlighting the
+                subtle colour on colour look. The beautiful back brings in a
+                hint of drama with white pearl scallops, dangling from rows of
+                small mirrors!
+              </p>
+              <div class="my-3">
+                <b>Composition:</b>
+                <ul>
+                  <li>Upper - Indian Silk</li>
+                  <li>Back - Indian Silk</li>
+                  <li>Lining and Sole - Leather</li>
+                  <li>Lining Cushion - Double Padded for that extra comfort</li>
+                </ul>
+              </div>
+              <p>
+                Dry Clean ONLY! <br />Store your juttis in the dust bag provided
+                to you with your box or in a muslin cloth Our juttis are
+                extremely soft, but if your feet are feeling extra sensitive,
+                line the inside of your juttis with mustard oil for a day and
+                leave. Keep them dry and away from moisture. If at all exposed
+                to moisture. Please dry them out for a few hours before putting
+                them back in.
+              </p>
+              <span class="d-block my-3">Country of Origin: India</span>
+              <span class="d-block border-top border-bottom py-2"
+                >Estimated Dispatch Time : 5 Days</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer start -->
+    <footer class="mt-5 pb-2">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Stocklist & Events
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="">Events & Exhibitions</a>
+                      </li>
+                      <li>
+                        <a href="">Stockists</a>
+                      </li>
+                      <li>
+                        <a href="">Brand Partnerships</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Shipping Support
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <a href="">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="">Exchanging & Returns</a>
+                      </li>
+                      <li>
+                        <a href="">Refund Policy</a>
+                      </li>
+                      <li>
+                        <a href="">Events & Exhibitions</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__support__content col">
+            <div class="col footer--responsive">
+              <h6>Stockists & Events</h6>
+              <ul>
+                <li><a href="#">Exchanges & Returns</a></li>
+                <li><a href="#">Stock Brand</a></li>
+                <li><a href="#">Partnerships</a></li>
+              </ul>
+            </div>
+            <div class="col footer--responsive">
+              <h6>Shopping support</h6>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Exchanges & Returns</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Events & Exhibitions</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3 text-center">
+            <div class="footer__desihangover__logo--img">
+              <img src="images/logo/dh_logo_footer.png" alt="footer-logo" />
+            </div>
+            <p>
+              When you walk out of our store, you don’t walk out with just a
+              shoe, but a story of an 800 Year old tradition of shoe making!!
+            </p>
+          </div>
+          <div class="col ms-5 footer--responsive--input">
+            <div class="footer__community">
+              <h6>Join Our Community Today</h6>
+              <div class="footer--input d-flex">
+                <input type="text" name="text" placeholder="Enter email here" />
+                <button><i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+              <p class="mt-3">
+                Stay in the Loop! Sign up for our newsletter to receive
+                exclusive offers, the latest updates, and heartwarming artisan
+                stories.
+              </p>
+            </div>
+            <div class="footer__followus">
+              <h5>Follow Us For Updates & Latest Deals</h5>
+              <div class="footer__followus--icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row footer__copyright">
+          <div class="col">
+            <span>© 2024, <a href="#">DesiHangover Shoes.</a> </span>
+          </div>
+          <div class="col">
+            <span> <a href="#">Powered by Shopify</a></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".productLeft", {
+        direction: "vertical",
+        slidesPerView: 4,
+        freeMode: true,
+        mousewheel: true,
+        watchSlidesProgress: true,
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+      var swiper2 = new Swiper(".productRight", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+      });
+    </script>
+
+    <!-- bootstrap link-js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- box-icons link-js-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>
