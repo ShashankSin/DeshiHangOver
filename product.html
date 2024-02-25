@@ -48,6 +48,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .card{
+        box-shadow: none;
+      }
+      .card__image{
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      }
+    </style>
   </head>
   <body>
     <!-- header starts -->
@@ -170,9 +178,9 @@
 
     <section>
       <!-- slider image -->
-      <div class="image--slider container mt-5">
+      <div class="image--slider container-lg mt-5">
         <div class="row">
-          <div class="col-lg-2">
+          <div class="col-lg-2 image--slider--main--slide">
             <div thumbsSlider="" class="swiper productLeft">
               <div class="swiper-wrapper">
                 <div class="swiper-slide thumb--image--slider__image">
@@ -221,6 +229,55 @@
             </div>
           </div>
           </div>
+          <div class="col-lg-8 image--slider--main--slide__responsive">
+            <div
+            style="
+              --swiper-navigation-color: #fff;
+              --swiper-pagination-color: #fff;
+              height: 900px;
+            "
+            class="swiper productTop"
+          >
+            
+            <div class="swiper-wrapper">
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/aotherside-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/back-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/bag-view.jpg" />
+              </div>
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/front-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide main--image--slider__image">
+                <img src="images/slider-images/inside-bag-view.jpg" />
+              </div>
+            </div>
+            
+          </div>
+          <div thumbsSlider="" class="swiper productBottom">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/slider-images/aotherside-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider-images/back-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider-images/bag-view.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider-images/front-bag-view.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider-images/inside-bag-view.jpg" />
+              </div>
+            </div>
+          </div>
+          </div>
           <div class="col-lg-4">
             <div class="image--slider--content p-0">
             <div class="mb-3">
@@ -230,7 +287,7 @@
             </div>
             <div class="mb-3">
               <span class="mb-1">Size</span>
-              <ul class="d-flex justify-content-between my-1 text-center">
+              <ul class="d-flex justify-content-between my-1 text-center flex-sm-wrap">
                 <li>
                   <span class="d-block py-2 px-3 border">36</span>
                 </li>
@@ -338,12 +395,15 @@
             <div class="col align-items-center d-flex justify-content-center">
               <!-- shoes-card -->
               <div class="card">
-                <img
-                  src="images/product-shoes-images/product-images-2.jpg"
-                  class="card-img-top card__image--hidden"
-                  alt="..."
-                />
-                <img src="images/product-shoes-images/product-images-1.jpg" alt="images" class="card-img-top card__img--hover">
+                <div class="card__image">
+                    <img
+                    src="images/product-shoes-images/product-images-2.jpg"
+                    class="card-img-top card__image--hidden"
+                    alt="..."
+                  />
+                  <img src="images/product-shoes-images/product-images-1.jpg" alt="images" class="card-img-top card__img--hover">
+                </div>
+                
                 <div class="card-body text-start">
                   <p class="card-text">
                     <h3 class="fs-5 ">MOTI BAGH (JUTTI)</h3>
@@ -355,12 +415,15 @@
             <div class="col align-items-center d-flex justify-content-center">
               <!-- shoes-card -->
               <div class="card">
-                <img
-                  src="images/product-shoes-images/product-images-4.jpg"
-                  class="card-img-top  card__image--hidden"
-                  alt="..."
-                /> 
-              <img src="images/product-shoes-images/product-images-5.jpg" alt="images" class="card-img-top card__img--hover">
+                <div class="card__image">
+                    <img
+                    src="images/product-shoes-images/product-images-4.jpg"
+                    class="card-img-top  card__image--hidden"
+                    alt="..."
+                  /> 
+                  <img src="images/product-shoes-images/product-images-5.jpg" alt="images" class="card-img-top card__img--hover">
+                </div>
+                
 
                 <div class="card-body text-start">
                   <p class="card-text">
@@ -373,12 +436,15 @@
             <div class="col align-items-center d-flex justify-content-center">
               <!-- shoes-card -->
               <div class="card">
-                <img
+                <div class="card__image">
+                  <img
                   src="images/product-shoes-images/product-images-6.jpg"
                   class="card-img-top  card__image--hidden"
                   alt="..."
                 />
                 <img src="images/product-shoes-images/product-images-7.jpg" alt="images" class="card-img-top card__img--hover">
+                </div>
+                
 
                 <div class="card-body text-start">
                   <p class="card-text">
@@ -391,13 +457,14 @@
             <div class="col align-items-center d-flex justify-content-center">
               <!-- shoes-card -->
               <div class="card">
-                <img
-                  src="images/product-shoes-images/product-images-3.jpg"
-                  class="card-img-top  card__image--hidden"
-                  alt="..."
-                />
-                <img src="images/product-shoes-images/product-images-1.jpg" alt="images" class="card-img-top card__img--hover">
-
+                <div class="card__image">
+                  <img
+                    src="images/product-shoes-images/product-images-3.jpg"
+                    class="card-img-top  card__image--hidden"
+                    alt="..."
+                  />
+                  <img src="images/product-shoes-images/product-images-1.jpg" alt="images" class="card-img-top card__img--hover">
+                </div>
                 <div class="card-body text-start">
                   <p class="card-text">
                     <h3  class="fs-5 ">BEGUM (JUTTI) </h3>
@@ -572,7 +639,23 @@
           swiper: swiper,
         },
       });
+      var swiper = new Swiper(".productBottom", {
+        spaceBetween: 10,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,  
+      });
+      var swiper2 = new Swiper(".productTop", {
+      spaceBetween: 10,
+      mousewheel: true, 
+      slidesPerView:1,
+      effect:"fade",
+      thumbs: {
+        swiper: swiper,
+      },
+      });
     </script>
+
 
     <!-- bootstrap link-js -->
     <script
@@ -583,5 +666,6 @@
 
     <!-- box-icons link-js-->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
   </body>
 </html>

@@ -43,7 +43,6 @@ header {
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -60,11 +59,11 @@ header {
 }
 
 .productRight {
-  /* height: 80%; */
   height: 100%;
   width: 100%;
 }
-.image--slider--main--slide {
+.image--slider--main--slide,
+.image--slider--main--slider__mousewheel {
   height: 1200px;
   overflow: hidden;
 }
@@ -74,20 +73,21 @@ header {
   padding: 10px 0;
 }
 
-.productLeft .swiper-slide {
+.productLeft .swiper-slide,
+.productBottom .swiper-slide {
   width: 25%;
   height: 100%;
   opacity: 0.4;
 }
 
-.productLeft .swiper-slide-thumb-active {
+.productLeft .swiper-slide-thumb-active,
+.productBottom .swiper-slide-thumb-active {
   opacity: 1;
 }
-
 .swiper-slide img {
   display: block;
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .advertising__banner {
@@ -426,6 +426,10 @@ nav i {
 .image--slider--content > div button:focus::before {
   transform: scaleX(1);
 }
+.image--slider--main--slide__responsive {
+  display: none;
+}
+.image--slider--main--slide__responsive
 /* section end */
 
 /* footer start */
@@ -644,6 +648,28 @@ footer .row > .col:first-child {
   }
   .offcanvas.offcanvas-top form i {
     left: 5%;
+  }
+  .image--slider--main--slide {
+    display: none;
+  }
+  .image--slider--main--slide__responsive {
+    display: block;
+  }
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
